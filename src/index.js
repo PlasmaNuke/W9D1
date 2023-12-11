@@ -1,7 +1,10 @@
 console.log("Webpack is working!");
 
-const MovingObject = require("./moving_object.js");
+// const MovingObject = require("./moving_object.js");
 
+import MovingObject from "./moving-object.js";
+
+window.MovingObject = MovingObject;
 
 const ctx = document.getElementById("canvas").getContext("2d")
 
