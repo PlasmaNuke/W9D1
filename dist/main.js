@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("console.log(\"Webpack is working!\");\n\nconst MovingObject = __webpack_require__(/*! ./moving_object.js */ \"./src/moving_object.js\");\n\nwindow.MovingObject = MovingObject;\n\n//# sourceURL=webpack://w9d1/./src/index.js?");
+eval("console.log(\"Webpack is working!\");\n\nconst MovingObject = __webpack_require__(/*! ./moving_object.js */ \"./src/moving_object.js\");\n\n\nconst ctx = document.getElementById(\"canvas\").getContext(\"2d\")\n\n// window.MovingObject = MovingObject;\n\nconst mo = new MovingObject({\n    pos: [30, 30],\n    vel: [10, 10],\n    radius: 5,\n    color: \"#00FF00\"\n});\n\nmo.draw(ctx)\n\n//# sourceURL=webpack://w9d1/./src/index.js?");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("console.log(\"Webpack is working!\");\n\nconst MovingObject = __webpack_re
   \******************************/
 /***/ ((module) => {
 
-eval("\n\nfunction MovingObject(optionsObj) {\n    this.pos = optionsObj.pos;\n    this.vel = optionsObj.vel;\n    this.radius = optionsObj.radius;\n    this.color = optionsObj.color;\n}\n\nmodule.exports = MovingObject;\n\n//# sourceURL=webpack://w9d1/./src/moving_object.js?");
+eval("class MovingObject {\n\n  constructor(optionsObj) {\n    this.pos = optionsObj.pos;\n    this.vel = optionsObj.vel;\n    this.radius = optionsObj.radius;\n    this.color = optionsObj.color;\n  }\n\n  draw = function(ctx){\n    ctx.beginPath()\n    ctx.arc( 250, 250, 50, 0, 2 * Math.PI)\n    ctx.strokeStyle = \"white\"\n    ctx.lineWidth = 10\n    ctx.fillStyle = \"brown\"\n    ctx.fill()\n    ctx.stroke()\n    ctx.closePath()\n  }\n\n\n}\nmodule.exports = MovingObject;\n\n\n//# sourceURL=webpack://w9d1/./src/moving_object.js?");
 
 /***/ })
 
