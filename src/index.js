@@ -2,11 +2,12 @@ console.log("Webpack is working!");
 
 // const MovingObject = require("./moving_object.js");
 
-import MovingObject from "./moving-object.js";
+import MovingObject from "./moving_object.js";
 
-window.MovingObject = MovingObject;
+document.addEventListener("DOMContentLoaded", () => {
 
-const ctx = document.getElementById("canvas").getContext("2d")
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // window.MovingObject = MovingObject;
 
@@ -18,3 +19,4 @@ const mo = new MovingObject({
 });
 
 mo.draw(ctx)
+});
