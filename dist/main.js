@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mov
   \******************************/
 /***/ ((module) => {
 
-eval("class MovingObject {\n\n  constructor(optionsObj) {\n    this.pos = optionsObj.pos;\n    this.vel = optionsObj.vel;\n    this.radius = optionsObj.radius;\n    this.color = optionsObj.color;\n  }\n\n  draw(ctx) {\n      console.log(\"drawing MovingObject\")\n    ctx.fillStyle = this.color;\n    ctx.beginPath()\n    ctx.arc( 100, 100, 50, 0, 2 * Math.PI)\n    ctx.strokeStyle = \"purple\"\n    ctx.lineWidth = 10\n    ctx.fill()\n    ctx.stroke()\n    // ctx.closePath()\n  }\n\n\n}\nmodule.exports = MovingObject;\n\n\n//# sourceURL=webpack://w9d1/./src/moving_object.js?");
+eval("class MovingObject {\n\n  constructor(optionsObj) {\n    this.pos = optionsObj.pos;\n    this.vel = optionsObj.vel;\n    this.radius = optionsObj.radius;\n    this.color = optionsObj.color;\n  }\n\n  draw(ctx) {\n      console.log(\"drawing MovingObject\")\n    ctx.fillStyle = this.color;\n    ctx.beginPath()\n    ctx.arc( 100, 100, 20, 0, 2 * Math.PI)\n    ctx.strokeStyle = \"purple\"\n    ctx.lineWidth = 10\n    ctx.fill()\n    ctx.stroke()\n    // ctx.closePath()\n  }\n\n\n}\nmodule.exports = MovingObject;\n\n\n//# sourceURL=webpack://w9d1/./src/moving_object.js?");
 
 /***/ })
 
